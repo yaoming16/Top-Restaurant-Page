@@ -1,0 +1,62 @@
+.main-image-div {
+    position: relative;
+}
+
+.main-image-div p {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: 'Georgia', serif;
+    z-index: 5;
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    color: #f4f1eb;
+    background-color: rgba(48, 25, 9, 0.5);
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+.restaurant-image {
+    width: 100%;
+    height: auto;
+}
+
+.food-image {
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 40px rgba(52, 52, 52, 0.5);
+}
+
+.restaurant-description {
+    width: 40%;
+    font-size: 1.3rem;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 40px rgba(52, 52, 52, 0.5);
+}
+
+.info-section {
+    margin-top: 2rem;
+    text-align: justify;
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
