@@ -1,0 +1,37 @@
+:root {
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-border: rgba(192, 75, 48, 0.5);
+}
+
+.menu-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--card-border);
+    box-shadow: 2px 2px 10px var(--card-shadow);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--card-bg);
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 12px var(--card-shadow);
+}
+
+.menu-card p {
+    text-align: left;
+}

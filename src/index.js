@@ -4,7 +4,7 @@ import "./contact/contact.css";
 import "./about/about.css";
 import "./menu/menu.css";
 
-/* import home from "./home/home.js";
+import home from "./home/home.js";
 import contact from "./contact/contact.js";
 import about from "./about/about.js";
 import menu from "./menu/menu.js";
@@ -39,4 +39,4 @@ const menuBtn = document.getElementById("menu-btn");
 menuBtn.addEventListener("click", () => {
     content.innerHTML = "";
     content.appendChild(menu());
-}); */
+});
