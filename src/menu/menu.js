@@ -112,14 +112,19 @@ export default function menu() {
         const itemPrice = document.createElement("p");
         itemPrice.textContent = `€${item.getPrice()}`;
 
+        // Info div
+        const itemInfo = document.createElement("div");
+        itemInfo.classList.add("menu-info");
+        itemInfo.appendChild(itemDescription);
+        itemInfo.appendChild(itemPrice);
+
         // Card div
         const itemDiv = document.createElement("div");
         itemDiv.classList.add("menu-card");
 
         itemDiv.appendChild(itemName);
         itemDiv.appendChild(itemImage);
-        itemDiv.appendChild(itemDescription);
-        itemDiv.appendChild(itemPrice);
+        itemDiv.appendChild(itemInfo);
 
         menuContainer.appendChild(itemDiv);
     });
