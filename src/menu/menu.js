@@ -1,11 +1,11 @@
-import croquetasImage from "./images/croqueta.jpeg";
-import churrosImage from "./images/churros.jpg";
-import gambasImage from "./images/gambas.jpg";
-import gazpachoImage from "./images/gazpacho.jpg";
-import paellaImage from "./images/paella-valenciana.jpg";
-import patatasBravasImage from "./images/patatas-bravas.jpg";
-import pulpoImage from "./images/pulpo.jpg";
-import spanishTortillaImage from "./images/spanish-tortilla.jpg";
+import croquetasImage from "./images/croqueta.webp";
+import churrosImage from "./images/churros.webp";
+import gambasImage from "./images/gambas.webp";
+import gazpachoImage from "./images/gazpacho.webp";
+import paellaImage from "./images/paella-valenciana.webp";
+import patatasBravasImage from "./images/patatas-bravas.webp";
+import pulpoImage from "./images/pulpo.webp";
+import spanishTortillaImage from "./images/spanish-tortilla.webp";
 
 let menuImages = [
     paellaImage,
@@ -100,6 +100,7 @@ export default function menu() {
 
         // Image
         const itemImage = document.createElement("img");
+        itemImage.loading = "lazy";
         itemImage.src = menuImages[index];
         itemImage.alt = item.getName();
         itemImage.classList.add("menu-image");

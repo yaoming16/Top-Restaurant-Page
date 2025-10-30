@@ -1,5 +1,6 @@
 .main-image-div {
     position: relative;
+    animation: fadeIn 0.8s ease-out;
 }
 
 .main-image-div p {
@@ -7,7 +8,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: 300;
-    font-family: 'Georgia', serif;
+    font-family: 'Playfair Display', serif;
     z-index: 5;
     position: absolute;
     bottom: 8%;
@@ -24,6 +25,8 @@
 .restaurant-image {
     width: 100%;
     height: auto;
+    max-height: 70vh;
+    object-fit: cover;
 }
 
 .food-image {
@@ -55,8 +58,127 @@
 }
 
 .info-section h2 {
+    font-family: 'Playfair Display', serif;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet Landscape (1024px and down) */
+@media (max-width: 1024px) {
+    .info-section {
+        padding: 3rem 2rem;
+    }
+    
+    .restaurant-description {
+        width: 45%;
+        font-size: 1.2rem;
+    }
+    
+    .food-image {
+        width: 45%;
+    }
+}
+
+/* Tablet Portrait (768px and down) */
+@media (max-width: 768px) {
+    .main-image-div p {
+        font-size: 2rem;
+        padding: 15px 20px;
+        bottom: 5%;
+    }
+    
+    .info-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .restaurant-description {
+        width: 90%;
+        margin: 1rem auto;
+        font-size: 1.1rem;
+    }
+    
+    .food-image {
+        width: 80%;
+        margin: 1rem auto;
+        order: -1; /* Image appears first on mobile */
+    }
+    
+    .info-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Mobile Landscape (580px and down) */
+@media (max-width: 580px) {
+    .main-image-div p {
+        font-size: 1.5rem;
+        padding: 12px 16px;
+        bottom: 3%;
+        letter-spacing: 0.5px;
+    }
+    
+    .info-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .restaurant-description {
+        width: 95%;
+        padding: 15px;
+        margin: 1rem auto;
+        font-size: 1rem;
+    }
+    
+    .food-image {
+        width: 90%;
+        margin: 1rem auto;
+    }
+    
+    .info-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile Portrait (480px and down) */
+@media (max-width: 480px) {
+    .main-image-div p {
+        font-size: 1.2rem;
+        padding: 10px 12px;
+        bottom: 2%;
+        letter-spacing: 0px;
+    }
+    
+    .info-section {
+        padding: 1rem 0.5rem;
+    }
+    
+    .restaurant-description {
+        width: 98%;
+        padding: 12px;
+        margin: 0.8rem auto;
+        font-size: 0.95rem;
+    }
+    
+    .food-image {
+        width: 95%;
+        margin: 0.8rem auto;
+        border-radius: 6px;
+    }
+    
+    .info-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-image-div p {
+        font-size: 1rem;
+    }
 }

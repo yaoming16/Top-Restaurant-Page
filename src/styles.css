@@ -1,15 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+
 * {
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #faf8f3; 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #faf8f3;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+p, span, div, button, input, textarea, label, a {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-container {
@@ -21,7 +30,7 @@ body {
     justify-content: center;
     flex-direction: row;
     position: absolute;
-    top: 185%;
+    top: 165%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -47,6 +56,7 @@ h1 {
 }
 
 nav button {
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 1rem;
     padding: 1rem 2rem;
     font-size: 1.5rem;
@@ -72,10 +82,10 @@ nav button:hover {
     text-align: center;
     padding: 2rem 1rem;
     box-shadow: 0 -2px 5px rgba(52, 52, 52, 0.3);
-    margin-top: auto;
 }
 
 .footer p {
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 0.5rem 0;
     font-size: 1rem;
     line-height: 1.5;
@@ -93,3 +103,137 @@ nav button:hover {
     text-decoration: underline;
 }
 
+.button-active {
+    background-color: #61280e; 
+    box-shadow: 4px 4px 15px rgba(52, 52, 52, 0.7);
+    border: 3px solid #1a1009;
+    transform: translateY(-4px);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Widescreen (1200px and up) */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    nav button {
+        margin: 1.5rem;
+        padding: 1.2rem 2.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .footer {
+        padding: 2.5rem 2rem;
+    }
+    
+    .footer p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    nav button {
+        margin: 1rem;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+    
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    header {
+        padding: 0.8rem 0;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+        margin: 0.8rem 0;
+    }
+    
+    .nav-container nav {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+    
+    nav button {
+        margin: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+        margin: 0.4rem 0;
+    }
+}
+
+/* Phone (480px and below) */
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+    }
+    
+    .nav-container nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+    
+    nav button {
+        margin: 0.2rem;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+        flex: 1;
+        max-width: 100px;
+        min-width: 70px;
+    }
+    
+    .footer {
+        padding: 1rem 0.5rem;
+    }
+    
+    .footer p {
+        font-size: 0.85rem;
+        margin: 0.3rem 0;
+        line-height: 1.4;
+    }
+    
+    .footer a {
+        display: inline-block;
+        padding: 0.2rem 0;
+    }
+}

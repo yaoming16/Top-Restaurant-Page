@@ -1,5 +1,5 @@
-import mainImage from './images/restaurant.jpg';
-import foodJPG from './images/food.jpg';
+import mainImage from './images/restaurant.webp';
+import foodJPG from './images/food.webp';
 
 export default function home() {
     // Main image section
@@ -58,20 +58,3 @@ export default function home() {
 
     return homeContainer;
 }
-
-// HTML Structure Reference i used, the idea for the project was to create everything using javascript
-/*<div>
-    <div class="main-image-div">
-        <img src="./images/restaurant.jpg" alt="Restaurant Image" class="restaurant-image">
-        <p >Where Spanish tradition meets global innovation</p>
-    </div>
-    <div class="info-section">
-        <div class="restaurant-description">
-            <h2>Experience Casa Serena, modern spanish food</h2>
-            <p>Where Spanish tradition meets global innovation</p>
-            <p>Experience the finest Spanish cuisine with a modern twist in the heart of Barcelona. Our chefs blend traditional recipes with international flavors to create an unforgettable dining experience.</p>
-            <p>Barcelona City Center</p>        
-        </div>
-        <img src="./images/food.jpg" alt="An example of our cuisine" class="food-image">
-    </div>
-</div> */
